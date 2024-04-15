@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- "parallel" is to reduce the test execution time, "thread-count" =>  The attribute thread−count 
+allows the user to specify how many threads should be run simultaniousely for this execution 
+Can also be done on class-level-->
+
+<suite name="Loan Department" parallel = "tests" thread-count="10">
+	<listeners>
+		<listener class-name="test.Listeners" />
+	</listeners>
+	<parameter name="URL" value="qaclickacademy.com"/>
+
+	<test name="Personal Loan" parallel="classes" thread-count="5">
+		<parameter name="URL" value="personalLoan.com"/>
+		<classes>
+			<class name="test.day1" />
+            <class name="test.day2" />
+		</classes>
+	</test>
+
+
+	<test name="Home Loan">
+		<parameter name="URL" value="HomeALoan.com"/>
+		<parameter name="APIKey/username" value="MisterMonopoly"/>
+		<classes>
+			<class name="test.day3"/>
+			<!-- excludes all testcases that start with the word "Mobile" -->
+				<!-- <methods>
+					<exclude name="Mobile.*"/>
+				</methods> -->
+		</classes>
+	</test>
+
+	<test name="Car Loan">
+		<classes>
+			<class name="test.day4"/>
+			<!-- Inlcudes only the defined test in the test output -->
+				<!-- <methods>
+					<include name="WebLoginCarLoan"/>
+				</methods> -->
+		</classes>
+	</test>
+
+</suite>
