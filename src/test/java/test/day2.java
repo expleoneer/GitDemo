@@ -29,6 +29,11 @@ public class day2 {
     @BeforeSuite
     public void BeforeSuite(){
         System.out.println("Before Suite");
+
+        System.out.println("Update 4");
+        System.out.println("Update 5");
+        System.out.println("Update 6");
+        System.out.println("Update 7");
     }
 
     // The scope of @AfterSuite also is the entire xml file
