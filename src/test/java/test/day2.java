@@ -18,6 +18,11 @@ public class day2 {
         System.out.println("Update1");
         System.out.println("Update2");
         System.out.println("Update3");
+
+        System.out.println("Update 4");
+        System.out.println("Update 5");
+        System.out.println("Update 6");
+        System.out.println("Update 7");
     }
 
     // The scope of @BeforeSuite is the entire xml file
