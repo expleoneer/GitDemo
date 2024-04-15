@@ -15,6 +15,9 @@ public class day2 {
     @BeforeTest
     public void Prerequisite(){
         System.out.println("Im going to execute first");
+        System.out.println("Update1");
+        System.out.println("Update2");
+        System.out.println("Update3");
     }
 
     // The scope of @BeforeSuite is the entire xml file
